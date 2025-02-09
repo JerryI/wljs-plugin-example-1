@@ -1,20 +1,26 @@
-# WLJS Notebook Plugin Template
+# WLJS Notebook Plugin Example 1
+*Basic library functions extension with Wolfram Language and Javascript*
 
-A boilerplate for writting various plugins/extensions for WLJS Notebook
+As an example we add here [__ApexCharts__](https://apexcharts.com/) to Wolfram Kernel
 
-Clone it to `<AppData>/wljs_packages/` folder and restart an app
+![](./imgs/radial.gif)
 
-## Commands
 
-To bundle Javascript
+## How to install
+1. Clone this repository to `<AppData>/wljs_packages` or paste github url to the settings menu
+2. Restart WLJS App
 
-```bash
-npm i
-npm run build
-```
 
-To restore `.git` 
+## Example
+Run in a new notebook
 
-```bash
-npm run restore
+```mathematica
+ApexCharts[<|
+  "series" -> {44, 55, 67, 83},
+  "chart" -> <|
+    "height" -> 350,
+    "type" -> "radialBar"
+  |>,
+  "labels" -> {"Apples", "Oranges", "Bananas", "Berries"}
+|>]
 ```
