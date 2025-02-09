@@ -9,8 +9,11 @@ ApexCharts::usage = "ApexCharts[a_Association] constructor"
 
 Begin["`Private`"]
 
+nonAssocHeadQ[_] = True
+nonAssocHeadQ[_Association] = False
+
 ApexCharts::notassoc = "Input is not an association"
-ApexCharts[_?Composition[Not, AssociationQ] ] := (Message[ApexCharts::notassoc]; $Failed)
+ApexCharts[_?nonAssocHeadQ ] := (Message[ApexCharts::notassoc]; $Failed)
 
 (* Output forms *)
 
