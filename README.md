@@ -5,6 +5,12 @@ As an example we add here [__ApexCharts__](https://apexcharts.com/) to Wolfram K
 
 ![](./imgs/radial.gif)
 
+It cover the basics of
+
+- lazy JS modules loading
+- writting a basic WLJS function in Javascript with local memory
+- making output forms for normal cells and slides (or WLX)
+- executing Wolfram Language on browser's side
 
 ## How to install
 1. Clone this repository to `<AppData>/wljs_packages` or paste github url to the settings menu
