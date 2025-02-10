@@ -22,7 +22,7 @@ ApexCharts /: MakeBoxes[a: ApexCharts[_Association], StandardForm ] := With[{},
 ]
 
 ApexCharts /: MakeBoxes[a: ApexCharts[_Association], StandardForm ] := With[{o = CreateFrontEndObject[a]},
-    ViewBox[a, o]
+    MakeBoxes[o, form]
 ] /; ByteCount[a] > 1024*4 (* Compress to FrontEndObject if too large *)
 
 
